@@ -35,9 +35,9 @@ public class adminHome extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
+        menuStudentResult = new javax.swing.JMenu();
+        menuLogout = new javax.swing.JMenu();
+        menuExit = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -59,24 +59,24 @@ public class adminHome extends javax.swing.JFrame {
         jMenu4.setText("Delete Question");
         jMenuBar1.add(jMenu4);
 
-        jMenu5.setText("All Student Result");
-        jMenuBar1.add(jMenu5);
+        menuStudentResult.setText("All Student Result");
+        jMenuBar1.add(menuStudentResult);
 
-        jMenu6.setText("Logout");
-        jMenu6.addMouseListener(new java.awt.event.MouseAdapter() {
+        menuLogout.setText("Logout");
+        menuLogout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu6MouseClicked(evt);
+                menuLogoutMouseClicked(evt);
             }
         });
-        jMenuBar1.add(jMenu6);
+        jMenuBar1.add(menuLogout);
 
-        jMenu7.setText("Exit");
-        jMenu7.addMouseListener(new java.awt.event.MouseAdapter() {
+        menuExit.setText("Exit");
+        menuExit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu7MouseClicked(evt);
+                menuExitMouseClicked(evt);
             }
         });
-        jMenuBar1.add(jMenu7);
+        jMenuBar1.add(menuExit);
 
         setJMenuBar(jMenuBar1);
 
@@ -94,7 +94,7 @@ public class adminHome extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenu6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu6MouseClicked
+    private void menuLogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuLogoutMouseClicked
         // TODO add your handling code here:
         JFrame jf = new JFrame();
         jf.setAlwaysOnTop(true);
@@ -103,9 +103,9 @@ public class adminHome extends javax.swing.JFrame {
             setVisible(false);
             new LoginAdmin().setVisible(true);
         } 
-    }//GEN-LAST:event_jMenu6MouseClicked
+    }//GEN-LAST:event_menuLogoutMouseClicked
 
-    private void jMenu7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu7MouseClicked
+    private void menuExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuExitMouseClicked
         // TODO add your handling code here:
         JFrame jf = new JFrame();
         jf.setAlwaysOnTop(true);
@@ -113,7 +113,7 @@ public class adminHome extends javax.swing.JFrame {
         if (a == 0) {
             System.exit(0);
         } 
-    }//GEN-LAST:event_jMenu7MouseClicked
+    }//GEN-LAST:event_menuExitMouseClicked
 
     private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
         // TODO add your handling code here:
@@ -167,9 +167,9 @@ public class adminHome extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu menuExit;
+    private javax.swing.JMenu menuLogout;
+    private javax.swing.JMenu menuStudentResult;
     // End of variables declaration//GEN-END:variables
 }

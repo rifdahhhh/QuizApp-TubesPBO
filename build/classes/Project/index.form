@@ -28,7 +28,7 @@
               <EmptySpace min="-2" pref="565" max="-2" attributes="0"/>
               <Component id="btnSiswa" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
-              <Component id="btnMurid" min="-2" max="-2" attributes="0"/>
+              <Component id="btnAdmin" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
               <Component id="btnKeluar" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="593" max="32767" attributes="0"/>
@@ -41,7 +41,7 @@
               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnSiswa" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnMurid" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnKeluar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="819" max="32767" attributes="0"/>
@@ -55,12 +55,12 @@
         <Property name="text" type="java.lang.String" value="Siswa"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnMurid">
+    <Component class="javax.swing.JButton" name="btnAdmin">
       <Properties>
         <Property name="text" type="java.lang.String" value="Admin"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMuridActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdminActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnKeluar">

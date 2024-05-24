@@ -33,7 +33,7 @@ public class index extends javax.swing.JFrame {
     private void initComponents() {
 
         btnSiswa = new javax.swing.JButton();
-        btnMurid = new javax.swing.JButton();
+        btnAdmin = new javax.swing.JButton();
         btnKeluar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -41,10 +41,10 @@ public class index extends javax.swing.JFrame {
 
         btnSiswa.setText("Siswa");
 
-        btnMurid.setText("Admin");
-        btnMurid.addActionListener(new java.awt.event.ActionListener() {
+        btnAdmin.setText("Admin");
+        btnAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMuridActionPerformed(evt);
+                btnAdminActionPerformed(evt);
             }
         });
 
@@ -63,7 +63,7 @@ public class index extends javax.swing.JFrame {
                 .addGap(565, 565, 565)
                 .addComponent(btnSiswa)
                 .addGap(99, 99, 99)
-                .addComponent(btnMurid)
+                .addComponent(btnAdmin)
                 .addGap(127, 127, 127)
                 .addComponent(btnKeluar)
                 .addContainerGap(593, Short.MAX_VALUE))
@@ -74,7 +74,7 @@ public class index extends javax.swing.JFrame {
                 .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSiswa)
-                    .addComponent(btnMurid)
+                    .addComponent(btnAdmin)
                     .addComponent(btnKeluar))
                 .addContainerGap(819, Short.MAX_VALUE))
         );
@@ -92,11 +92,11 @@ public class index extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnKeluarActionPerformed
 
-    private void btnMuridActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMuridActionPerformed
+    private void btnAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminActionPerformed
         // TODO add your handling code here:
         setVisible(false);
         new LoginAdmin().setVisible(true);
-    }//GEN-LAST:event_btnMuridActionPerformed
+    }//GEN-LAST:event_btnAdminActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,8 +134,8 @@ public class index extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdmin;
     private javax.swing.JButton btnKeluar;
-    private javax.swing.JButton btnMurid;
     private javax.swing.JButton btnSiswa;
     // End of variables declaration//GEN-END:variables
 }
