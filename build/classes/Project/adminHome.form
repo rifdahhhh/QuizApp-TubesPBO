@@ -32,6 +32,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Delete Question"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="deleteQuestionMouseClicked"/>
+          </Events>
         </Menu>
         <Menu class="javax.swing.JMenu" name="menuStudentResult">
           <Properties>
