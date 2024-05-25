@@ -27,15 +27,15 @@ public class studentDetails extends javax.swing.JFrame {
         initComponents();
         SimpleDateFormat dFormat=new SimpleDateFormat("dd-MM-yyyy");
         Date date=new Date();
-        jLabel3.setText(dFormat.format(date));
+        showDate.setText(dFormat.format(date));
         
-        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+        inputRollnum.addKeyListener(new java.awt.event.KeyAdapter() {
         public void keyTyped(java.awt.event.KeyEvent evt) {
             filterAngka(evt);
              }
         });
 
-        jTextField5.addKeyListener(new java.awt.event.KeyAdapter() {
+        inputContact.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 filterAngka(evt);
             }
@@ -43,12 +43,12 @@ public class studentDetails extends javax.swing.JFrame {
     }
     
     void clear(){
-        jTextField1.setText(""); // Roll Number
-        jTextField2.setText(""); // Name
-        jComboBox1.setSelectedIndex(0); // Gender
-        jTextField4.setText(""); // Email
-        jTextField5.setText(""); // Contact Number
-        jTextField6.setText(""); // Address
+        inputRollnum.setText(""); // Roll Number
+        inputName.setText(""); // Name
+        inputGender.setSelectedIndex(0); // Gender
+        inputEmail.setText(""); // Email
+        inputContact.setText(""); // Contact Number
+        inputAddress.setText(""); // Address
     }
     
     private void filterAngka(java.awt.event.KeyEvent evt) {
@@ -67,11 +67,11 @@ public class studentDetails extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        mainLabel = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        showDate = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
+        btnClose = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -81,39 +81,39 @@ public class studentDetails extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        inputRollnum = new javax.swing.JTextField();
+        inputName = new javax.swing.JTextField();
+        inputEmail = new javax.swing.JTextField();
+        inputContact = new javax.swing.JTextField();
+        inputAddress = new javax.swing.JTextField();
+        btnSave = new javax.swing.JButton();
+        inputGender = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jLabel1.setFont(new java.awt.Font("Algerian", 1, 40)); // NOI18N
-        jLabel1.setText("Fill up the form");
+        mainLabel.setFont(new java.awt.Font("Algerian", 1, 40)); // NOI18N
+        mainLabel.setText("Fill up the form");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel2.setText("Date: ");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel3.setText("Time:");
+        showDate.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        showDate.setText("time");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jButton2.setText("Close");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnClose.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btnClose.setText("Close");
+        btnClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnCloseActionPerformed(evt);
             }
         });
 
@@ -135,77 +135,77 @@ public class studentDetails extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel11.setText("Address");
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(204, 204, 204));
-        jTextField1.setText("12345678");
-        jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
+        inputRollnum.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        inputRollnum.setForeground(new java.awt.Color(204, 204, 204));
+        inputRollnum.setText("12345678");
+        inputRollnum.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                jTextField1FocusGained(evt);
+                inputRollnumFocusGained(evt);
             }
         });
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        inputRollnum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                inputRollnumActionPerformed(evt);
             }
         });
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(204, 204, 204));
-        jTextField2.setText("John Doe");
-        jTextField2.addFocusListener(new java.awt.event.FocusAdapter() {
+        inputName.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        inputName.setForeground(new java.awt.Color(204, 204, 204));
+        inputName.setText("John Doe");
+        inputName.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                jTextField2FocusGained(evt);
+                inputNameFocusGained(evt);
             }
         });
 
-        jTextField4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(204, 204, 204));
-        jTextField4.setText("john@upi.edu");
-        jTextField4.addFocusListener(new java.awt.event.FocusAdapter() {
+        inputEmail.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        inputEmail.setForeground(new java.awt.Color(204, 204, 204));
+        inputEmail.setText("john@upi.edu");
+        inputEmail.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                jTextField4FocusGained(evt);
+                inputEmailFocusGained(evt);
             }
         });
 
-        jTextField5.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(204, 204, 204));
-        jTextField5.setText("0812345678");
-        jTextField5.addFocusListener(new java.awt.event.FocusAdapter() {
+        inputContact.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        inputContact.setForeground(new java.awt.Color(204, 204, 204));
+        inputContact.setText("0812345678");
+        inputContact.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                jTextField5FocusGained(evt);
+                inputContactFocusGained(evt);
             }
         });
 
-        jTextField6.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(204, 204, 204));
-        jTextField6.setText("Kabupaten/Kota, Provinsi, Negara");
-        jTextField6.addFocusListener(new java.awt.event.FocusAdapter() {
+        inputAddress.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        inputAddress.setForeground(new java.awt.Color(204, 204, 204));
+        inputAddress.setText("Kabupaten/Kota, Provinsi, Negara");
+        inputAddress.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                jTextField6FocusGained(evt);
+                inputAddressFocusGained(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jButton3.setText("Save and Next");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnSave.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btnSave.setText("Save and Next");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnSaveActionPerformed(evt);
             }
         });
 
-        jComboBox1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
-        jComboBox1.addFocusListener(new java.awt.event.FocusAdapter() {
+        inputGender.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        inputGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
+        inputGender.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                jComboBox1FocusGained(evt);
+                inputGenderFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                jComboBox1FocusLost(evt);
+                inputGenderFocusLost(evt);
             }
         });
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        inputGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                inputGenderActionPerformed(evt);
             }
         });
 
@@ -217,15 +217,15 @@ public class studentDetails extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addComponent(jLabel1)
+                        .addComponent(mainLabel)
                         .addGap(185, 185, 185)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3)
+                        .addComponent(showDate)
                         .addGap(356, 356, 356)
-                        .addComponent(jButton1)
+                        .addComponent(btnBack)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2))
+                        .addComponent(btnClose))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 1608, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -245,13 +245,13 @@ public class studentDetails extends javax.swing.JFrame {
                             .addComponent(jLabel8))
                         .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton3)
-                            .addComponent(jTextField1)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField4)
-                            .addComponent(jTextField5)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 572, Short.MAX_VALUE)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(btnSave)
+                            .addComponent(inputRollnum)
+                            .addComponent(inputName)
+                            .addComponent(inputEmail)
+                            .addComponent(inputContact)
+                            .addComponent(inputAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 572, Short.MAX_VALUE)
+                            .addComponent(inputGender, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -260,44 +260,44 @@ public class studentDetails extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
-                        .addComponent(jLabel1))
+                        .addComponent(mainLabel))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2))))
+                            .addComponent(showDate)
+                            .addComponent(btnBack)
+                            .addComponent(btnClose))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputRollnum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputContact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel11)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(inputAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(btnSave)
                 .addGap(5, 5, 5)
                 .addComponent(jLabel10)
                 .addContainerGap(380, Short.MAX_VALUE))
@@ -306,37 +306,37 @@ public class studentDetails extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         setVisible(false);
         new index().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
         // TODO add your handling code here:
         int a = JOptionPane.showConfirmDialog(null, "Apakah kamu yakin akan keluar dari aplikasi?", "Keluar", JOptionPane.YES_NO_OPTION);
         if (a == 0) {
             System.exit(0);
         } else {
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnCloseActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void inputRollnumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputRollnumActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_inputRollnumActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void inputGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputGenderActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_inputGenderActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
-        String rollNo = jTextField1.getText();
-        String name = jTextField2.getText();
-        String gender = (String) jComboBox1.getSelectedItem();
-        String email = jTextField4.getText();
-        String contactNo = jTextField5.getText();
-        String address = jTextField6.getText();
+        String rollNo = inputRollnum.getText();
+        String name = inputName.getText();
+        String gender = (String) inputGender.getSelectedItem();
+        String email = inputEmail.getText();
+        String contactNo = inputContact.getText();
+        String address = inputAddress.getText();
         String marks = "0";
 
         // Validasi apakah semua field sudah diisi
@@ -379,55 +379,55 @@ public class studentDetails extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnSaveActionPerformed
 
-    private void jTextField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusGained
+    private void inputRollnumFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputRollnumFocusGained
         // TODO add your handling code here:
-        if (jTextField1.getText().equals("12345678")) {
-            jTextField1.setText("");
-            jTextField1.setForeground(Color.black);
+        if (inputRollnum.getText().equals("12345678")) {
+            inputRollnum.setText("");
+            inputRollnum.setForeground(Color.black);
         }
-    }//GEN-LAST:event_jTextField1FocusGained
+    }//GEN-LAST:event_inputRollnumFocusGained
 
-    private void jTextField2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField2FocusGained
+    private void inputNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputNameFocusGained
         // TODO add your handling code here:
-         if (jTextField2.getText().equals("John Doe")) {
-            jTextField2.setText("");
-            jTextField2.setForeground(Color.black);
+         if (inputName.getText().equals("John Doe")) {
+            inputName.setText("");
+            inputName.setForeground(Color.black);
         }
-    }//GEN-LAST:event_jTextField2FocusGained
+    }//GEN-LAST:event_inputNameFocusGained
 
-    private void jComboBox1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jComboBox1FocusGained
+    private void inputGenderFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputGenderFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1FocusGained
+    }//GEN-LAST:event_inputGenderFocusGained
 
-    private void jTextField4FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField4FocusGained
+    private void inputEmailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputEmailFocusGained
         // TODO add your handling code here:
-        if (jTextField4.getText().equals("john@upi.edu")) {
-           jTextField4.setText("");
-           jTextField4.setForeground(Color.black);
+        if (inputEmail.getText().equals("john@upi.edu")) {
+           inputEmail.setText("");
+           inputEmail.setForeground(Color.black);
         }
-    }//GEN-LAST:event_jTextField4FocusGained
+    }//GEN-LAST:event_inputEmailFocusGained
 
-    private void jTextField5FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField5FocusGained
+    private void inputContactFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputContactFocusGained
         // TODO add your handling code here:
-        if (jTextField5.getText().equals("0812345678")) {
-            jTextField5.setText("");
-            jTextField5.setForeground(Color.black);
+        if (inputContact.getText().equals("0812345678")) {
+            inputContact.setText("");
+            inputContact.setForeground(Color.black);
         }
-    }//GEN-LAST:event_jTextField5FocusGained
+    }//GEN-LAST:event_inputContactFocusGained
 
-    private void jTextField6FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField6FocusGained
+    private void inputAddressFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputAddressFocusGained
         // TODO add your handling code here:
-        if (jTextField6.getText().equals("Kabupaten/Kota, Provinsi, Negara")) {
-            jTextField6.setText("");
-            jTextField6.setForeground(Color.black);
+        if (inputAddress.getText().equals("Kabupaten/Kota, Provinsi, Negara")) {
+            inputAddress.setText("");
+            inputAddress.setForeground(Color.black);
         }
-    }//GEN-LAST:event_jTextField6FocusGained
+    }//GEN-LAST:event_inputAddressFocusGained
 
-    private void jComboBox1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jComboBox1FocusLost
+    private void inputGenderFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputGenderFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1FocusLost
+    }//GEN-LAST:event_inputGenderFocusLost
 
     /**
      * @param args the command line arguments
@@ -465,15 +465,18 @@ public class studentDetails extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnClose;
+    private javax.swing.JButton btnSave;
+    private javax.swing.JTextField inputAddress;
+    private javax.swing.JTextField inputContact;
+    private javax.swing.JTextField inputEmail;
+    private javax.swing.JComboBox<String> inputGender;
+    private javax.swing.JTextField inputName;
+    private javax.swing.JTextField inputRollnum;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -481,10 +484,7 @@ public class studentDetails extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JLabel mainLabel;
+    private javax.swing.JLabel showDate;
     // End of variables declaration//GEN-END:variables
 }
