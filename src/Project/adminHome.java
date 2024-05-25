@@ -67,6 +67,11 @@ public class adminHome extends javax.swing.JFrame {
         jMenuBar1.add(allQuestions);
 
         deleteQuestion.setText("Delete Question");
+        deleteQuestion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                deleteQuestionMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(deleteQuestion);
 
         menuStudentResult.setText("All Student Result");
@@ -160,6 +165,18 @@ public class adminHome extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(jf, "One form is already open");
         }
     }//GEN-LAST:event_allQuestionsMouseClicked
+
+    private void deleteQuestionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteQuestionMouseClicked
+        // TODO add your handling code here:
+         if (open == 0) {
+            new deleteQuestion().setVisible(true);
+            open = 1;
+        } else {
+            JFrame jf = new JFrame();
+            jf.setAlwaysOnTop(true);
+            JOptionPane.showMessageDialog(jf, "One form is already open");
+        }
+    }//GEN-LAST:event_deleteQuestionMouseClicked
 
     /**
      * @param args the command line arguments
