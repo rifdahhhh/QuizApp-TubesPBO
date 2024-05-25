@@ -31,10 +31,10 @@ public class adminHome extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
+        addNewQuestion = new javax.swing.JMenu();
+        updateQuestion = new javax.swing.JMenu();
+        allQuestions = new javax.swing.JMenu();
+        deleteQuestion = new javax.swing.JMenu();
         menuStudentResult = new javax.swing.JMenu();
         menuLogout = new javax.swing.JMenu();
         menuExit = new javax.swing.JMenu();
@@ -42,22 +42,32 @@ public class adminHome extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jMenu1.setText("Add New Question");
-        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+        addNewQuestion.setText("Add New Question");
+        addNewQuestion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu1MouseClicked(evt);
+                addNewQuestionMouseClicked(evt);
             }
         });
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(addNewQuestion);
 
-        jMenu2.setText("Update Question");
-        jMenuBar1.add(jMenu2);
+        updateQuestion.setText("Update Question");
+        updateQuestion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                updateQuestionMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(updateQuestion);
 
-        jMenu3.setText("All Question");
-        jMenuBar1.add(jMenu3);
+        allQuestions.setText("All Questions");
+        allQuestions.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                allQuestionsMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(allQuestions);
 
-        jMenu4.setText("Delete Question");
-        jMenuBar1.add(jMenu4);
+        deleteQuestion.setText("Delete Question");
+        jMenuBar1.add(deleteQuestion);
 
         menuStudentResult.setText("All Student Result");
         jMenuBar1.add(menuStudentResult);
@@ -115,7 +125,7 @@ public class adminHome extends javax.swing.JFrame {
         } 
     }//GEN-LAST:event_menuExitMouseClicked
 
-    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+    private void addNewQuestionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addNewQuestionMouseClicked
         // TODO add your handling code here:
         if (open == 0) {
             new addNewQuestion().setVisible(true);
@@ -125,7 +135,31 @@ public class adminHome extends javax.swing.JFrame {
             jf.setAlwaysOnTop(true);
             JOptionPane.showMessageDialog(jf, "One form is already open");
         }
-    }//GEN-LAST:event_jMenu1MouseClicked
+    }//GEN-LAST:event_addNewQuestionMouseClicked
+
+    private void updateQuestionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateQuestionMouseClicked
+        // TODO add your handling code here:
+        if (open == 0) {
+            new updateQuestion().setVisible(true);
+            open = 1;
+        } else {
+            JFrame jf = new JFrame();
+            jf.setAlwaysOnTop(true);
+            JOptionPane.showMessageDialog(jf, "One form is already open");
+        }
+    }//GEN-LAST:event_updateQuestionMouseClicked
+
+    private void allQuestionsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_allQuestionsMouseClicked
+        // TODO add your handling code here:
+        if (open == 0) {
+            new allQuestions().setVisible(true);
+            open = 1;
+        } else {
+            JFrame jf = new JFrame();
+            jf.setAlwaysOnTop(true);
+            JOptionPane.showMessageDialog(jf, "One form is already open");
+        }
+    }//GEN-LAST:event_allQuestionsMouseClicked
 
     /**
      * @param args the command line arguments
@@ -163,13 +197,13 @@ public class adminHome extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu addNewQuestion;
+    private javax.swing.JMenu allQuestions;
+    private javax.swing.JMenu deleteQuestion;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu menuExit;
     private javax.swing.JMenu menuLogout;
     private javax.swing.JMenu menuStudentResult;
+    private javax.swing.JMenu updateQuestion;
     // End of variables declaration//GEN-END:variables
 }
