@@ -373,8 +373,9 @@ public class studentDetails extends javax.swing.JFrame {
             psInsert.setString(6, address);
             psInsert.setString(7, marks);
             psInsert.executeUpdate();
-
-            JOptionPane.showMessageDialog(null, "Berhasil disimpan!");
+            setVisible(false);
+            new InstructionStudent(rollNo).setVisible(true);
+                    
             clear();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
