@@ -7,6 +7,7 @@ package Project;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author rifdahhr
@@ -75,6 +76,11 @@ public class adminHome extends javax.swing.JFrame {
         jMenuBar1.add(deleteQuestion);
 
         menuStudentResult.setText("All Student Result");
+        menuStudentResult.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menuStudentResultMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(menuStudentResult);
 
         menuLogout.setText("Logout");
@@ -178,6 +184,19 @@ public class adminHome extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_deleteQuestionMouseClicked
 
+    private void menuStudentResultMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuStudentResultMouseClicked
+        // TODO add your handling code here:
+        if (open == 0) {
+            new menuStudentResult().setVisible(true);
+            open = 1;
+        } else {
+            JFrame jf = new JFrame();
+            jf.setAlwaysOnTop(true);
+            JOptionPane.showMessageDialog(jf, "One form is already open");
+        }
+    }//GEN-LAST:event_menuStudentResultMouseClicked
+
+    
     /**
      * @param args the command line arguments
      */
